@@ -1,14 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.escuela.escuelacompleto.Controlador.administradorControlador"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="409.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.escuela.escuelacompleto.Controlador.administradorControlador">
+   <children>
+      <AnchorPane prefHeight="410.0" prefWidth="119.0" style="-fx-background-color: #252525;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="91.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/administrador/imgAdmin.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="133.0" prefHeight="35.0" prefWidth="90.0" text="GABO APP" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="118.0" prefHeight="81.0" prefWidth="522.0" style="-fx-background-color: #3871c1;">
+         <children>
+            <Label alignment="CENTER" layoutX="23.0" layoutY="24.0" prefHeight="35.0" prefWidth="108.0" text="BUSCAR" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField layoutX="144.0" layoutY="28.0" prefHeight="26.0" prefWidth="323.0" promptText="escribe el nombre....">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="129.0" layoutY="94.0" prefHeight="287.0" prefWidth="495.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="CREACION USUARIOS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="5.0" layoutY="9.0" prefHeight="27.0" prefWidth="72.0" text="NOMBRE">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="77.0" layoutY="10.0" prefHeight="26.0" prefWidth="154.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                        <Label alignment="CENTER" layoutX="234.0" layoutY="9.0" prefHeight="27.0" prefWidth="108.0" text="CONTRASEÑA">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="344.0" layoutY="10.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                        <Label alignment="CENTER" layoutX="239.0" layoutY="47.0" prefHeight="27.0" prefWidth="90.0" text="TELEFONO">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="344.0" layoutY="48.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                        <Label alignment="CENTER" layoutX="5.0" layoutY="47.0" prefHeight="27.0" prefWidth="72.0" text="EMAIL">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="77.0" layoutY="48.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                        <SplitMenuButton layoutX="12.0" layoutY="94.0" mnemonicParsing="false" text="USUARIOS DISPONIBLES">
+                          <items>
+                            <MenuItem mnemonicParsing="false" style="-fx-font-family: Arial" text="administrador" />
+                            <MenuItem mnemonicParsing="false" style="-fx-font-family: Arial" text="alumno" />
+                              <MenuItem mnemonicParsing="false" style="-fx-font-family: Arial" text="maestro" />
+                          </items>
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </SplitMenuButton>
+                        <Button layoutX="305.0" layoutY="194.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="CREAR USUARIO" />
+                        <Button layoutX="156.0" layoutY="194.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="126.0" text="ELIMINAR USUARIO" />
+                        <Label alignment="CENTER" layoutX="239.0" layoutY="84.0" prefHeight="27.0" prefWidth="90.0" text="ID USUARIO">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="344.0" layoutY="85.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+           <Tab text="CREACION CURSOS">
+              <content>
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                       <Label alignment="CENTER" layoutX="5.0" layoutY="9.0" prefHeight="27.0" prefWidth="163.0" text="NOMBRE DEL CURSO">
+                          <font>
+                             <Font name="Arial" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField layoutX="176.0" layoutY="10.0" prefHeight="26.0" prefWidth="310.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font></TextField>
+                       <Label alignment="CENTER" layoutX="5.0" layoutY="83.0" prefHeight="27.0" prefWidth="72.0" text="EMAIL">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField layoutX="77.0" layoutY="84.0" />
+                       <Button layoutX="305.0" layoutY="194.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="CREAR USUARIO" />
+                       <Button layoutX="156.0" layoutY="194.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="126.0" text="ELIMINAR USUARIO" />
+                       <Label alignment="CENTER" layoutX="239.0" layoutY="84.0" prefHeight="27.0" prefWidth="90.0" text="ID USUARIO">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField layoutX="344.0" layoutY="85.0" />
+                    </children></AnchorPane>
+              </content>
+           </Tab>
+           <Tab text="MAESTROS">
+              <content>
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                       <Label alignment="CENTER" layoutX="5.0" layoutY="9.0" prefHeight="27.0" prefWidth="72.0" text="NOMBRE">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField layoutX="77.0" layoutY="10.0" />
+                       <Label alignment="CENTER" layoutX="234.0" layoutY="9.0" prefHeight="27.0" prefWidth="108.0" text="CONTRASEÑA">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField layoutX="344.0" layoutY="10.0" />
+                       <Label alignment="CENTER" layoutX="239.0" layoutY="47.0" prefHeight="27.0" prefWidth="90.0" text="TELEFONO">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField layoutX="344.0" layoutY="48.0" />
+                       <Label alignment="CENTER" layoutX="5.0" layoutY="47.0" prefHeight="27.0" prefWidth="72.0" text="EMAIL">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField layoutX="77.0" layoutY="48.0" />
+                       <SplitMenuButton layoutX="12.0" layoutY="94.0" mnemonicParsing="false" text="USUARIOS DISPONIBLES">
+                          <items>
+                             <MenuItem mnemonicParsing="false" style="-fx-font-family: Arial" text="administrador" />
+                             <MenuItem mnemonicParsing="false" style="-fx-font-family: Arial" text="alumno" />
+                             <MenuItem mnemonicParsing="false" style="-fx-font-family: Arial" text="maestro" />
+                          </items>
+                          <font>
+                             <Font name="Arial" size="12.0" />
+                          </font>
+                       </SplitMenuButton>
+                       <Button layoutX="305.0" layoutY="194.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="CREAR USUARIO" />
+                       <Button layoutX="156.0" layoutY="194.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="126.0" text="ELIMINAR USUARIO" />
+                       <Label alignment="CENTER" layoutX="239.0" layoutY="84.0" prefHeight="27.0" prefWidth="90.0" text="ID USUARIO">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField layoutX="344.0" layoutY="85.0" />
+                    </children></AnchorPane>
+              </content>
+           </Tab>
+        </tabs>
+      </TabPane>
+   </children>
 </AnchorPane>
