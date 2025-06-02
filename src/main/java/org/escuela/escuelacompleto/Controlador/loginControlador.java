@@ -1,10 +1,14 @@
 package org.escuela.escuelacompleto.Controlador;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import org.escuela.escuelacompleto.HelloApplication;
 
 import javax.swing.*;
 
@@ -23,8 +27,23 @@ public class loginControlador {
     private void verificacionContrasenia(){
         String usuario = txtUsuario.getText();
         String contrasenia = txtContrasenia.getText();
+        if (usuario.equals("") || contrasenia.equals("")){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/org/escuela/escuelacompleto/administrador.fxml"));
+            AnchorPane root = fxmlLoader.load();
 
-        JOptionPane.showMessageDialog(null, usuario + " " + contrasenia);
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) btnLogin.getScene().getWindow();
+            stage.setTitle("ADMINISTRADOR");
+            stage.setScene(scene);
+            stage.show();
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Error al cargar el administrador");
+        }
+
+        }else {
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
+        }
     }
 
 
