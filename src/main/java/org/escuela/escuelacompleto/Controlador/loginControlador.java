@@ -41,8 +41,21 @@ public class loginControlador {
             JOptionPane.showMessageDialog(null, "Error al cargar el administrador");
         }
 
-        }else {
-            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
+        }else if (usuario.equals("maestro") && contrasenia.equals("maestro")){
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/org/escuela/escuelacompleto/maestros.fxml"));
+                AnchorPane root = fxmlLoader.load();
+
+
+                Scene scene = new Scene(root);
+                scene.getStylesheets().add(HelloApplication.class.getResource("/org/escuela/escuelacompleto/estilos/estilos-generales.css").toExternalForm());
+                Stage stage = (Stage) btnLogin.getScene().getWindow();
+                stage.setTitle("MAESTROS");
+                stage.setScene(scene);
+                stage.show();
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(null, "Error al cargar el maestro");
+            }
         }
     }
 

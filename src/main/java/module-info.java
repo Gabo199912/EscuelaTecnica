@@ -11,8 +11,9 @@
         requires eu.hansolo.tilesfx;
         requires javafx.graphics;
         requires java.desktop;
+            requires java.sql;
 
-        opens org.escuela.escuelacompleto.Controlador to javafx.fxml;
+            opens org.escuela.escuelacompleto.Controlador to javafx.fxml;
         opens org.escuela.escuelacompleto to javafx.fxml;
         exports org.escuela.escuelacompleto;
     }
