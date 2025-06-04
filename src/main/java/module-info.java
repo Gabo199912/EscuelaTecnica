@@ -13,6 +13,7 @@
         requires java.desktop;
             requires java.sql;
 
+            opens org.escuela.escuelacompleto.Modelo to javafx.base;
             opens org.escuela.escuelacompleto.Controlador to javafx.fxml;
         opens org.escuela.escuelacompleto to javafx.fxml;
         exports org.escuela.escuelacompleto;

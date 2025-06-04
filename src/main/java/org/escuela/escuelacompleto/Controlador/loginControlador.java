@@ -38,7 +38,7 @@ public class loginControlador {
             stage.setScene(scene);
             stage.show();
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null, "Error al cargar el administrador");
+            JOptionPane.showMessageDialog(null, "Error al cargar el administrador" + e.getMessage());
         }
 
         }else if (usuario.equals("maestro") && contrasenia.equals("maestro")){
