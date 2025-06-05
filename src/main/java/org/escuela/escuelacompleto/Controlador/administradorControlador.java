@@ -171,12 +171,6 @@ public class administradorControlador implements Initializable {
     }
 
 
-    public void CargarCursos(){
-
-
-
-    }
-
     @FXML
     public void seteoFechas(){
         LocalDate fechaActual = LocalDate.now();
