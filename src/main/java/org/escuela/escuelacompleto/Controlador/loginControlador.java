@@ -8,7 +8,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.escuela.escuelacompleto.HelloApplication;
+import org.escuela.escuelacompleto.AplicacionEscuela;
 
 import javax.swing.*;
 
@@ -29,7 +29,7 @@ public class loginControlador {
         String contrasenia = txtContrasenia.getText();
         if (usuario.equals("") || contrasenia.equals("")){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/org/escuela/escuelacompleto/administrador.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(AplicacionEscuela.class.getResource("/org/escuela/escuelacompleto/administrador.fxml"));
             AnchorPane root = fxmlLoader.load();
 
             Scene scene = new Scene(root);
@@ -43,12 +43,12 @@ public class loginControlador {
 
         }else if (usuario.equals("maestro") && contrasenia.equals("maestro")){
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/org/escuela/escuelacompleto/maestros.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(AplicacionEscuela.class.getResource("/org/escuela/escuelacompleto/maestros.fxml"));
                 AnchorPane root = fxmlLoader.load();
 
 
                 Scene scene = new Scene(root);
-                scene.getStylesheets().add(HelloApplication.class.getResource("/org/escuela/escuelacompleto/estilos/estilos-generales.css").toExternalForm());
+                scene.getStylesheets().add(AplicacionEscuela.class.getResource("/org/escuela/escuelacompleto/estilos/estilos-generales.css").toExternalForm());
                 Stage stage = (Stage) btnLogin.getScene().getWindow();
                 stage.setTitle("MAESTROS");
                 stage.setScene(scene);

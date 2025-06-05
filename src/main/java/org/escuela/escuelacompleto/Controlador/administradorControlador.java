@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.escuela.escuelacompleto.Modelo.cursosModelo;
+import org.escuela.escuelacompleto.Modelo.duracionCursosModelo;
 import org.escuela.escuelacompleto.Modelo.personaModelo;
 
 import javax.swing.*;
@@ -26,10 +28,13 @@ public class administradorControlador implements Initializable {
     private SplitMenuButton splitUsuarios;
 
     @FXML
-    private TextField txtNombreCreacion, txtContraseniaCreacion, txtEmailCreacion, txtTelefonoCreacion, txtEliminarUsuarios, txtIdMaestro;
+    private TextField txtNombreCreacion, txtContraseniaCreacion, txtEmailCreacion, txtTelefonoCreacion, txtEliminarUsuarios, txtIdMaestro, txtNombreCurso;
 
     @FXML
     private TableView<personaModelo> tablaBuscarUsuasrios, tablaMaestros;
+
+    @FXML
+    private TableView<cursosModelo> tablaCursos;
 
     @FXML
     private TableColumn<personaModelo, Integer> columnaId, idColumnaMaestros;
@@ -38,7 +43,7 @@ public class administradorControlador implements Initializable {
     private TableColumn<personaModelo, String> columnaNombre, columnaTipoUsuario, columnaEmail, columnaTelefono, columnaNombreMaestros;
 
     @FXML
-    private Button btnEliminar, btnBuscarPersona, btnMaestros;
+    private Button btnEliminar, btnBuscarPersona, btnMaestros, btnCrearCurso;
 
 
     @FXML
@@ -145,6 +150,31 @@ public class administradorControlador implements Initializable {
             CargarDatos();
             cargarMaestros();
         }
+    }
+
+
+
+    public void CrearCurso(){
+
+        try {
+            String nombreCurso = txtNombreCurso.getText();
+            Integer idMaestro = Integer.parseInt(txtIdMaestro.getText());
+            LocalDate fecha_inicio = fechaInicio.getValue();
+            LocalDate fecha_final = fechaFinal.getValue();
+
+            cursosModelo.CrearCurso(nombreCurso, idMaestro);
+            duracionCursosModelo.DuracionCurso(fecha_inicio, fecha_final);
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Error al crear el curso: " + e.getMessage() );
+        }
+    }
+
+
+    public void CargarCursos(){
+
+
+
     }
 
     @FXML

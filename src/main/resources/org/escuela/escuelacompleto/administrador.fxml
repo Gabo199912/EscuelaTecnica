@@ -103,36 +103,36 @@
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font></TextField>
-                       <Label alignment="CENTER" layoutX="5.0" layoutY="46.0" prefHeight="27.0" prefWidth="119.0" text="FECHA INICIO">
+                       <Label alignment="CENTER" layoutX="5.0" layoutY="53.0" prefHeight="27.0" prefWidth="119.0" text="FECHA INICIO">
                           <font>
                              <Font name="Arial Bold" size="15.0" />
                           </font>
                        </Label>
-                       <Button layoutX="23.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="119.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="CREAR CURSO" />
-                        <Label alignment="CENTER" layoutX="212.0" layoutY="46.0" prefHeight="27.0" prefWidth="163.0" text="FECHA FINALIZACION">
+                       <Button fx:id="btnCrearCurso" layoutX="64.0" layoutY="209.0" mnemonicParsing="false" onAction="#CrearCurso" prefHeight="35.0" prefWidth="119.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="CREAR CURSO" />
+                        <Label alignment="CENTER" layoutX="212.0" layoutY="53.0" prefHeight="27.0" prefWidth="163.0" text="FECHA FINALIZACION">
                            <font>
                               <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
-                        <DatePicker fx:id="fechaInicio" layoutX="14.0" layoutY="84.0" onAction="#seteoFechas" />
-                        <DatePicker fx:id="fechaFinal" layoutX="214.0" layoutY="84.0" onAction="#seteoFechas" />
-                        <TableView fx:id="tablaMaestros" layoutX="389.0" layoutY="10.0" prefHeight="200.0" prefWidth="194.0" stylesheets="@estilos/estilos-tabla.css">
+                        <DatePicker fx:id="fechaInicio" layoutX="12.0" layoutY="91.0" onAction="#seteoFechas" />
+                        <DatePicker fx:id="fechaFinal" layoutX="207.0" layoutY="91.0" onAction="#seteoFechas" />
+                        <TableView fx:id="tablaMaestros" layoutX="389.0" layoutY="52.0" prefHeight="200.0" prefWidth="194.0" stylesheets="@estilos/estilos-tabla.css">
                           <columns>
                             <TableColumn fx:id="idColumnaMaestros" prefWidth="56.20001220703125" text="ID" />
                             <TableColumn fx:id="columnaNombreMaestros" prefWidth="132.5999755859375" text="MAESTROS" />
                           </columns>
                         </TableView>
-                        <Label alignment="CENTER" layoutX="401.0" layoutY="213.0" prefHeight="27.0" prefWidth="107.0" text="ID MAESTRO">
+                        <Label alignment="CENTER" layoutX="399.0" layoutY="9.0" prefHeight="27.0" prefWidth="107.0" text="ID MAESTRO">
                            <font>
                               <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="txtIdMaestro" layoutX="518.0" layoutY="214.0" prefHeight="26.0" prefWidth="57.0">
+                        <TextField fx:id="txtIdMaestro" layoutX="516.0" layoutY="10.0" prefHeight="26.0" prefWidth="57.0">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="btnMaestros" layoutX="251.0" layoutY="209.0" mnemonicParsing="false" onAction="#buscarMaestroPorId" prefHeight="35.0" prefWidth="139.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="BUSCAR MAESTRO" />
+                        <Button fx:id="btnMaestros" layoutX="204.0" layoutY="209.0" mnemonicParsing="false" onAction="#buscarMaestroPorId" prefHeight="35.0" prefWidth="139.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="BUSCAR MAESTRO" />
                     </children></AnchorPane>
               </content>
            </Tab>
@@ -169,7 +169,7 @@
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="667.0">
                         <children>
                             <Button layoutX="321.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="BUCAR" />
-                            <TableView fx:id="tablaBuscarCursos" layoutX="11.0" layoutY="14.0" prefHeight="174.0" prefWidth="555.0" stylesheets="@estilos/estilos-tabla.css">
+                            <TableView fx:id="tablaCursos" layoutX="11.0" layoutY="14.0" prefHeight="174.0" prefWidth="555.0" stylesheets="@estilos/estilos-tabla.css">
                                 <columns>
                                     <TableColumn fx:id="id_curso" prefWidth="42.20001292228699" text="id" />
                                     <TableColumn fx:id="nombre_curso" prefWidth="133.79998397827148" text="NOMBRE DE CURSO" />
